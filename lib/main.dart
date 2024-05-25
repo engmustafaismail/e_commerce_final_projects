@@ -9,7 +9,6 @@ import 'package:get/get.dart';
 import 'Core/Constant/theme.dart';
 import 'Core/Localization/translations.dart';
 import 'generated/l10n.dart';
-import 'test.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

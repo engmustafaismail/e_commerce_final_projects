@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:e_commerce_final_projects/Controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

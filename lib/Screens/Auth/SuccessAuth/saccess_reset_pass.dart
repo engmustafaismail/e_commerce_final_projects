@@ -1,4 +1,3 @@
-import 'package:e_commerce_final_projects/Controller/auth/reset_password_controller.dart';
 import 'package:e_commerce_final_projects/Controller/auth/success_reset_controller.dart';
 import 'package:e_commerce_final_projects/Screens/Auth/SuccessAuth/widgets/custom_success_page.dart';
 import 'package:e_commerce_final_projects/generated/l10n.dart';
