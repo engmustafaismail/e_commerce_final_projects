@@ -58,15 +58,20 @@ class LogInBody extends StatelessWidget {
                 Gap.responsivGap(context, .03),
                 //password  <-----|
 
-                CustomPasswordFeild(
-                  validator: (val) {
-                    return ValidInpute.passord(val!, 8, 15, context);
-                  },
-                   onTapIcon: () {  },
-                  controller: controller.password,
-                  label: S.of(context).password,
-                  icon: Icons.lock_outline,
-                  hidepassword: true,
+                GetBuilder<AuthControllerLoginImp>(
+                  init: AuthControllerLoginImp(),
+                  builder: (controller) => CustomPasswordFeild(
+                    validator: (val) {
+                      return ValidInpute.passord(val!, 8, 15, context);
+                    },
+                    onTapIcon: () {
+                      controller.showPassword();
+                    },
+                    controller: controller.password,
+                    label: S.of(context).password,
+                    icon: Icons.lock_outline,
+                    hidepassword: controller.hidePassword,
+                  ),
                 ),
                 //
                 const ForgetPasswordLogInText(),
