@@ -33,9 +33,8 @@ class MyApp extends StatelessWidget {
       theme: englishTheme,
       translations: MyTranslations(),
       locale: controller.language,
-      // initialRoute: NamesOfPages.languagePage,
-      initialRoute: RoutesOfPages.onboarding,
-      // home: const Test(),
+      initialRoute: RoutesOfPages.languagePage,
+      // initialRoute: RoutesOfPages.onboarding,
       getPages: routes,
       debugShowCheckedModeBanner: false,
     );

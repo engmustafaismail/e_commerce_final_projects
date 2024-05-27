@@ -34,29 +34,39 @@ class NewPasswordBody extends StatelessWidget {
             //
             Gap.responsivGap(context, .05),
 
-            CustomPasswordFeild(
-              label: S.of(context).password,
-              icon: Icons.lock_outline,
-              controller: controller.password,
-              hidepassword: true,
-              validator: (val) {
-                return ValidInpute.passord(val!, 8, 16, context);
-              },
-               onTapIcon: () {  },
-            ),
+            GetBuilder<ResetPasswordControllerImp>(
+                init: ResetPasswordControllerImp(),
+                builder: (controller) => CustomPasswordFeild(
+                      label: S.of(context).password,
+                      icon: Icons.lock_outline,
+                      controller: controller.password,
+                      hidepassword: controller.hidePassword,
+                      validator: (val) {
+                        return ValidInpute.passord(val!, 8, 16, context);
+                      },
+                      onTapIcon: () {
+                        controller.showPassword();
+                      },
+                    )),
 
             Gap.responsivGap(context, .05),
 
-            CustomPasswordFeild(
-              label: S.of(context).confirmpassword,
-              icon: Icons.confirmation_num_outlined,
-              controller: controller.repassword,
-              hidepassword: true,
-               onTapIcon: () {  },
-              validator: (val) {
-                return ValidInpute.passord(val!, 8, 16, context);
-              },
-            ),
+            GetBuilder<ResetPasswordControllerImp>(
+                init: ResetPasswordControllerImp(),
+                builder: (controller) {
+                  return CustomPasswordFeild(
+                    label: S.of(context).confirmpassword,
+                    icon: Icons.confirmation_num_outlined,
+                    controller: controller.repassword,
+                    hidepassword: controller.hidePassword,
+                    onTapIcon: () {
+                      controller.showPassword();
+                    },
+                    validator: (val) {
+                      return ValidInpute.passord(val!, 8, 16, context);
+                    },
+                  );
+                }),
             //
 
             Gap.responsivGap(context, .03),

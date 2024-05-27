@@ -69,7 +69,8 @@ class LogInBody extends StatelessWidget {
                     },
                     controller: controller.password,
                     label: S.of(context).password,
-                    icon: Icons.lock_outline,
+                    icon: Icons
+                        .lock_outline, // fetch a icon propperly frm (icon pub get)
                     hidepassword: controller.hidePassword,
                   ),
                 ),

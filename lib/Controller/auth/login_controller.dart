@@ -16,10 +16,11 @@ class AuthControllerLoginImp extends AuthControllerLogIn {
   late TextEditingController password;
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
-  bool hidePassword = false;
+  bool hidePassword = true;
 
- bool showPassword() {
-   return hidePassword = !hidePassword;
+  showPassword() {
+    hidePassword = !hidePassword;
+    update();
   }
 
   @override

@@ -72,16 +72,22 @@ class SignUpBody extends StatelessWidget {
                 //
                 Gap.responsivGap(context, .03),
 
-                CustomPasswordFeild(
-                  controller: controller.password,
-                  onTapIcon: () {},
-                  label: S.of(context).password,
-                  icon: Icons.lock_outline,
-                  hidepassword: true,
-                  validator: (val) {
-                    return ValidInpute.passord(val!, 8, 16, context);
-                  },
-                ),
+                GetBuilder<AuthControllerSignUpImp>(
+                    init: AuthControllerSignUpImp(),
+                    builder: (controller) {
+                      return CustomPasswordFeild(
+                        controller: controller.password,
+                        onTapIcon: () {
+                          controller.showPassword();
+                        },
+                        label: S.of(context).password,
+                        icon: Icons.lock_outline,
+                        hidepassword: controller.hidePassword,
+                        validator: (val) {
+                          return ValidInpute.passord(val!, 8, 16, context);
+                        },
+                      );
+                    }),
 
                 Gap.responsivGap(context, .03),
 

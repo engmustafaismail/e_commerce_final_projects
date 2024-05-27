@@ -3,12 +3,14 @@ import 'package:e_commerce_final_projects/Core/Services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../Constant/routes_of_pages.dart';
+
 class LanguageController extends GetxController {
   late Locale language;
 
   MyServices myServices = Get.find();
 
- late ThemeData themeData ;
+  late ThemeData themeData;
 
   changLanguage(String langaugeCode) {
     Locale locale = Locale(langaugeCode);
@@ -50,5 +52,15 @@ class LanguageController extends GetxController {
     }
 
     super.onInit();
+  }
+
+  englishLang() {
+    changLanguage("en");
+    Get.offAllNamed(RoutesOfPages.onboarding);
+  }
+
+  arabicLang() {
+    changLanguage("ar");
+    Get.offAllNamed(RoutesOfPages.onboarding);
   }
 }

@@ -11,6 +11,13 @@ class ResetPasswordControllerImp extends ResetPasswordController {
   late TextEditingController password;
   late TextEditingController repassword;
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
+  bool hidePassword = true;
+
+  showPassword() {
+    hidePassword = !hidePassword;
+    update();
+  }
+
   @override
   checkEmail() {
     var formdata = globalKey.currentState;

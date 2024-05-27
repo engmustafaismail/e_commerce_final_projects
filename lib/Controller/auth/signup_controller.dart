@@ -16,6 +16,12 @@ class AuthControllerSignUpImp extends AuthControllerSignUp {
   late TextEditingController phone;
 
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
+   bool hidePassword = true;
+
+  showPassword() {
+    hidePassword = !hidePassword;
+    update();
+  }
 
   @override
   signUp() {
