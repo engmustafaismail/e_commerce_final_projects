@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       theme: englishTheme,
-      translations: MyTranslations(),
+      // translations: MyTranslations(),
       locale: controller.language,
       initialRoute: RoutesOfPages.languagePage,
       // initialRoute: RoutesOfPages.onboarding,
