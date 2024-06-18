@@ -1,4 +1,6 @@
+import 'package:e_commerce_final_projects/Core/Classes/request_status.dart';
 import 'package:e_commerce_final_projects/Core/Constant/routes_of_pages.dart';
+import 'package:e_commerce_final_projects/Core/Functions/check_internet.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -44,6 +46,7 @@ class AuthControllerLoginImp extends AuthControllerLogIn {
     super.onInit();
   }
 
+  
   @override
   void dispose() {
     email.dispose();
