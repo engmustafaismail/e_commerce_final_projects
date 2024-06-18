@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
       initialRoute: RoutesOfPages.languagePage,
       // initialRoute: RoutesOfPages.onboarding,
       getPages: routes,
+      
       debugShowCheckedModeBanner: false,
     );
   }
