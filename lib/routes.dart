@@ -8,6 +8,7 @@ import 'package:e_commerce_final_projects/Screens/Auth/SuccessAuth/saccess_reset
 import 'package:e_commerce_final_projects/Screens/Auth/SuccessAuth/success_signup.dart';
 import 'package:e_commerce_final_projects/Screens/Language/language_page.dart';
 import 'package:e_commerce_final_projects/Screens/OnBoarding/onboarding.dart';
+import 'package:e_commerce_final_projects/test_view.dart';
 import 'package:get/get.dart';
 
 import 'Screens/Auth/ForgetPassword/forget_password_screen.dart';
@@ -20,6 +21,10 @@ List<GetPage<dynamic>> routes = [
     middlewares: [
       AppMiddleware(),
     ],
+  ),
+   GetPage(
+    name: Test.test,
+    page: () => const Test(),
   ),
   GetPage(
     name: RoutesOfPages.onboarding,

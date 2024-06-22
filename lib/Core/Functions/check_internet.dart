@@ -6,6 +6,7 @@ checkInternet() async {
     if (result.isNotEmpty) {
       return true;
     }
+
     //on name_exeption  نضعها عند  توقع الخطأ المحتمل أي نضع الexception المحتملة
   } on SocketException catch (_) {
     return false;

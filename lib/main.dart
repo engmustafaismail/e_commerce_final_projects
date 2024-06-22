@@ -1,3 +1,4 @@
+import 'package:e_commerce_final_projects/Binding/initialbinding.dart';
 import 'package:e_commerce_final_projects/Core/Constant/routes_of_pages.dart';
 import 'package:e_commerce_final_projects/Core/Localization/controller/local_controller.dart';
 import 'package:e_commerce_final_projects/Core/Services/services.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
       locale: controller.language,
       initialRoute: RoutesOfPages.languagePage,
       // initialRoute: RoutesOfPages.onboarding,
+      initialBinding: InitialBindings(),
       getPages: routes,
       
       debugShowCheckedModeBanner: false,
