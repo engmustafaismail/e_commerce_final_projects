@@ -17,7 +17,11 @@ class TestController extends GetxController {
     requestStatus = handlingData(response);
     print(requestStatus);
     if (requestStatus == RequestStatus.success) {
-      data.addAll(response['data']);
+      if (response['status'] == "success") {
+        data.addAll(response['data']);
+      } else {
+        requestStatus = RequestStatus.failure;
+      }
     }
     update();
   }
