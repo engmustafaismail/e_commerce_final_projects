@@ -26,7 +26,7 @@ class HandlingDataView extends StatelessWidget {
         // ),
       );
     } else if (requestStatus == RequestStatus.serverFailure) {
-      return Center(child: Lottie.asset(AppImageAssets.servererror));
+      return Center(child: Lottie.asset(AppImageAssets.servererror,width: 200,height: 200));
     } else if (requestStatus == RequestStatus.offlineFailure) {
       return Center(child: Lottie.asset(AppImageAssets.offline,));
     } else if (requestStatus == RequestStatus.failure) {

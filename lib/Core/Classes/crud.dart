@@ -12,9 +12,14 @@ class Crud {
         var response = await http.post(
           Uri.parse(link),
           body: jsonEncode(data),
+          headers: {'Content-Type': 'application/json'},
         );
+        print(Uri.parse(link));
+        print("++++++++++++++++++++++++++++++++++$response");
+        print(response.statusCode);
         if (response.statusCode == 200) {
           Map responseBody = jsonDecode(response.body);
+          print("===================$responseBody");
           return Right(responseBody);
         } else {
           return const Left(RequestStatus.serverFailure);

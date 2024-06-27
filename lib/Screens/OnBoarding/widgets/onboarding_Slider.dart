@@ -4,7 +4,7 @@ import 'package:e_commerce_final_projects/Controller/onboarding_controller.dart'
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../Data/DataSource/static.dart';
+import '../../../Data/DataSource/static/static.dart';
 import 'onboarding_body_text.dart';
 import 'onboarding_image_style.dart';
 import 'onboarding_title.dart';

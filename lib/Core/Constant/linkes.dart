@@ -2,10 +2,9 @@ class AppLinkes {
   static const String server =
       "https://ecommercefinalproject1111.000webhostapp.com/ecommercefinalproject";
   static const String test = "$server/test.php";
+  //Auth
+  static const String signUp = "$server/auth/signUp.php";
 }
-
-
-
 
 /*
 https://panel.000webhost.com/dashboard/ecommercefinalproject1111/dashboard

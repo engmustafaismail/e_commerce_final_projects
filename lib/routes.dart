@@ -22,10 +22,10 @@ List<GetPage<dynamic>> routes = [
       AppMiddleware(),
     ],
   ),
-   GetPage(
-    name: Test.test,
-    page: () => const Test(),
-  ),
+  //  GetPage(
+  //   name: Test.test,
+  //   page: () => const Test(),
+  // ),
   GetPage(
     name: RoutesOfPages.onboarding,
     page: () => const OnBoarding(),
