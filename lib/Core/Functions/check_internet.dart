@@ -1,6 +1,6 @@
 import 'dart:io';
 
-checkInternet() async {
+ checkInternet() async {
   try {
     var result = await InternetAddress.lookup("google.com");
     if (result.isNotEmpty) {
